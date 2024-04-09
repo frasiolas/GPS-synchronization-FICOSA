@@ -1,8 +1,8 @@
 # GPS synchronization tool (FICOSA)
 
 ## Outputs of the tool:
-1) __4 csv files__ with 2 rows each file each corresponding to 1 of the 4 cameras (front,right,left,back) . The first row is the TimestampHDF (GPS) and the second row is the closest frame that it is mapped to.
-2) __colmap folder__ that contains images.txt, cameras.txt, points3D.txt. These are needed in order to load the sparse model in colmap. 
+*__4 csv files__ with 2 rows each file each corresponding to 1 of the 4 cameras (front,right,left,back) . The first row is the TimestampHDF (GPS) and the second row is the closest frame that it is mapped to.
+*__colmap folder__ that contains images.txt, cameras.txt, points3D.txt. These are needed in order to load the sparse model in colmap. 
 
 ## How to run the tool:
 
