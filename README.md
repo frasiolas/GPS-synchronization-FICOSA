@@ -7,10 +7,8 @@
 
 ## How to run the tool:
 1. When using the images captured by the cameras (front, right, left, and back), it's recommended to crop the images to discard the camera boundaries.
-
 `python crop.py `
 
 2. 
-
 `python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>`
 
