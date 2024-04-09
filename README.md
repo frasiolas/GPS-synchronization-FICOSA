@@ -1,1 +1,1 @@
-# GPS-synchronization-tool-FICOSA-
+# GPS synchronization tool( FICOSA)
