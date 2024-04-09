@@ -6,7 +6,7 @@
 
 
 ## How to run the tool:
-1. When using the images captured by the cameras (front, right, left, and back), it's recommended to crop the images to discard the camera boundaries.
+1. Run to crop the images to discard the camera boundaries.
 `python crop.py `
 
 2. 
