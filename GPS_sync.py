@@ -12,6 +12,20 @@ def create_folder(folder_path):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
+# def quaternion_from_axis_angle(axis, angle_degrees):
+#     angle_radians = math.radians(angle_degrees)
+#     half_angle = angle_radians / 2.0
+#     sin_half_angle = math.sin(half_angle)
+    
+#     q = (
+#         math.cos(half_angle),
+#         axis[0] * sin_half_angle,
+#         axis[1] * sin_half_angle,
+#         axis[2] * sin_half_angle
+#     )
+    
+#     return q
+
 
 def vector_length(v):
     return math.sqrt(v[0]**2 + v[1]**2 + v[2]**2)
@@ -56,6 +70,27 @@ def rotation_matrix_to_quaternion(R):
 
     return np.array([qw, qx, qy, qz])
 
+# axis_of_rotation = (0.0, 1, 0.0)  # Rotation around x-axis
+# angle_of_rotation = 45.0  # Degrees
+
+# quaternion = quaternion_from_axis_angle(axis_of_rotation, angle_of_rotation)
+
+# # Given quaternion [0.7, 0, 0.7, 0]
+# original_quaternion = quaternion
+
+# # Given translation vector T = [0, 0, 1]
+# translation_vector = np.array([1, 1, 1])
+
+# # Convert quaternion to rotation matrix
+# rotation_matrix = quaternion_to_rotation_matrix(original_quaternion)
+
+# # Transpose the rotation matrix
+# transposed_rotation_matrix = np.transpose(rotation_matrix)
+
+# # Perform -transpose(R) * T
+# result_vector = -np.dot(transposed_rotation_matrix, translation_vector)
+
+
 #Extract the extrinsic infromation of front,right,left,back cameras
 def extract_values(file_path):
     with open(file_path, 'r') as file:
@@ -84,7 +119,10 @@ def main(main_folder, folder_cam, total_frames, threshold_min, threshold_max,col
 
     create_folder(folder_cam)
     create_folder(colmap_path)
-    colmap_path = os.path.join(colmap_path, 'colmap.txt')
+    images_path = os.path.join(colmap_path, 'images.txt')
+    cameras_path = os.path.join(colmap_path, 'cameras.txt')
+    points3D_path = os.path.join(colmap_path, 'points3D.txt')
+
     subfolder_name = r'HDFExtractData'
     odometry = None
 
@@ -134,7 +172,7 @@ def main(main_folder, folder_cam, total_frames, threshold_min, threshold_max,col
         result_df['Timestamp'] = result_df['Timestamp'].astype('int64')
         result_df['ClosestTimestampHDF'] = result_df['ClosestTimestampHDF'].astype('int64')
         absolute_difference = abs(result_df['Timestamp'] - result_df['ClosestTimestampHDF'])
- 
+        #Filter rows within the specified range (2200 to 2900)
         mask = (absolute_difference >=threshold_min) & (absolute_difference <= threshold_max)
         # Apply the mask to the DataFrame
         result_df = result_df[mask]
@@ -253,14 +291,21 @@ def main(main_folder, folder_cam, total_frames, threshold_min, threshold_max,col
 
 
         if global_index == 0 :
-            with open(colmap_path, 'w') as file:
+            with open(images_path, 'w') as file:
                 for _, row in outputs_df.iterrows():
                     file.write(' '.join(map(str, row)) + '\n\n')
         else:
-            with open(colmap_path, 'a') as file:
+            with open(images_path, 'a') as file:
                 for _, row in outputs_df.iterrows():
                     file.write(' '.join(map(str, row)) + '\n\n')
-    
+
+    with open(cameras_path, 'w') as file:
+                file.write('1 SIMPLE_RADIAL 968 600 369.99475464818056 484 300 -0.0017993058548071376')
+                
+    with open(points3D_path, 'w') as file:
+                file.write('')
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--main-folder', type=str, help='Path to the main folder containing other required files')
