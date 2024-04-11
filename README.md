@@ -1,5 +1,6 @@
 # GPS Synchronization Tool (CERTH)
 
+This tool extracts the frames from Ficosa's video (optional), preprocesses them so they can be utilized by COLMAP and synchronizes the frames with the provided GPS coordinates 
 ## Prerequisites:
 
 #### FFmpeg: https://ffmpeg.org/download.html
@@ -17,7 +18,7 @@
 1. Run to preprocess the images
    
  ```bash
- python preprocess.py --main-folder /path/to/main/folder --output-folder /path/to/output/folder --input-type {video, images} --input-folder /path/to/input_images/folder
+ python preprocess.py --main-folder <path_to_main_folder> --output-folder <path_to_output_folder> --input-type {video, images} --input-folder <path_to_input_images_folder>
  ```
 2. Run to create the csv files and the colmap folder
 
