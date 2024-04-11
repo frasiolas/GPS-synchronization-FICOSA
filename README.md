@@ -39,7 +39,7 @@ python gps_sync.py --main-folder <path_to_main_folder> --csv-folder <path_to_cam
 
 #### gps_sync
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
-* folder-cam: Path to the folder containing camera CSV files
+* csv-folder: Path to the folder to write the camera CSV files
 * total-frames: Number of frames to extract
 * threshold-min: Minimum threshold for closest times (optional: if not set it takes all frames)
 * threshold-max: Maximum threshold for closest times (optional: if not set it takes all frames)
