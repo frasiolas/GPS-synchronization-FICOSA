@@ -32,7 +32,7 @@ python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_cam
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
 * output-folder: Path to the output folder to save the processed images
 * input-type: {images, video}
-   * video: Extract frames from the Ficosa's video
+   * video: Extract frames from the FICOSA's video
    * images: Assume that images are extracted and properly named
 * input-folder: Folder that contains the input images (requires: input-type = images) 
 
