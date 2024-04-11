@@ -25,10 +25,10 @@
 ## Help:
 #### preprocess
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
-* output-folder: Path to the outputput folder to save the processed images
+* output-folder: Path to the output folder to save the processed images
 * input-type: {images, video}
-   ** video: Extract frames from the Ficosa's video
-   ** images: Assume that images are extracted and properly named
+   * video: Extract frames from the Ficosa's video
+   * images: Assume that images are extracted and properly named
 * input-folder: If input-type==images it is the folder that contains them
 
 
@@ -38,7 +38,7 @@
 * total-frames: Number of frames to extract
 * threshold-min: Minimum threshold for closest times
 * threshold-max: Maximum threshold for closest times
-*colmap-path: Path to the output Colmap text file 
+* colmap-path: Path to the output Colmap text file 
 
 
 
