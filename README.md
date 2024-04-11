@@ -48,7 +48,7 @@ python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_cam
 
 
 ## Outputs of the tool:
-* __4 csv files__ (0_cam, 1_cam, 2_cam, 3_cam) each corresponding to 1 of the 4 cameras (front, right, left, back).
+* __4 csv files__ (0_cam, 1_cam, 2_cam, 3_cam) each corresponding to 1 of the 4 cameras (front, right, left, back)
   
   ![Example of csv file](csv_example.png)
 * __colmap folder__ that contains images.txt, cameras.txt, points3D.txt. These are needed in order to load the sparse model in COLMAP. 
