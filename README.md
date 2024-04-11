@@ -1,4 +1,4 @@
-# GPS synchronization tool (FICOSA)
+# GPS synchronization tool (CERTH)
 
 ## Prerequisites:
 
@@ -6,7 +6,7 @@
 
 #### Colmap: https://colmap.github.io/
 
-#### Libraries
+#### Python Libraries
 * Pillow
 * Pandas
 * Numpy
