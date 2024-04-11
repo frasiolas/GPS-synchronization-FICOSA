@@ -276,8 +276,8 @@ if __name__ == "__main__":
     parser.add_argument('--main-folder', type=str, help='Path to the main folder containing other required files')
     parser.add_argument('--csv-folder', type=str, help='Path to the folder to write the camera CSV files')
     parser.add_argument('--total-frames', type=int, help='Number of frames to extract')
-    parser.add_argument('--threshold-min', type=int, help='Minimum threshold for closest times')
-    parser.add_argument('--threshold-max', type=int, help='Maximum threshold for closest times')
+    parser.add_argument('--threshold-min',default=0, type=int, help='Minimum threshold for closest times')
+    parser.add_argument('--threshold-max',default=10000, type=int, help='Maximum threshold for closest times')
     parser.add_argument('--colmap-path', type=str, help='Path to the output Colmap text file')
 
     args = parser.parse_args()
