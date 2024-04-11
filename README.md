@@ -55,4 +55,4 @@ python gps_sync.py --main-folder <path_to_main_folder> --csv-folder <path_to_cam
 
 
 ## License
-This project is licensed under the [MIT License][LICENSE].
+This project is licensed under the [MIT License](LICENSE).
