@@ -6,6 +6,12 @@
 
 #### Colmap: https://colmap.github.io/
 
+#### Libraries
+* Pillow
+* Pandas
+* Numpy
+* scipy
+
 ## Run:
 
 1. Run to preprocess the images
