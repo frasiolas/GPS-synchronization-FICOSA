@@ -14,12 +14,12 @@
 
 ## Run:
 
-- Run to preprocess the images
+1. Run to preprocess the images
    
  ```bash
  python preprocess.py --main-folder /path/to/main/folder --output-folder /path/to/output/folder --input-type {video, images} --input-folder /path/to/input_images/folder
  ```
-- Run to create the csv files and the colmap folder
+2. Run to create the csv files and the colmap folder
 
 ```bash
 python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>`
