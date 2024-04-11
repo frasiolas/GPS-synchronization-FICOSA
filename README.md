@@ -1,11 +1,11 @@
 # GPS synchronization tool (FICOSA)
 
-## How to run the tool:
-1. Run to rename and crop the images.
+## Prerequisites:
+1. Run to preprocess the images
    
-`python crop_rename --source-folder /path/to/source/folder --target-folder /path/to/target/folder --crop-left 0 --crop-upper 0 --crop-right 968 --crop-lower 600`
-
-2. Run to create the csv files and the colmap folder
+ `python preprocess.py --main-folder  /path/to/main/folder  --output-folder /path/to/output/folder --input-type {video, images} --input-folder /path/to/input_images/folder`
+ 
+3. Run to create the csv files and the colmap folder
    
 `python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>`
 
