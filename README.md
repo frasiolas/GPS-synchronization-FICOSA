@@ -24,7 +24,7 @@ This tool designed to synchronize frames from videos with GPS information provid
 2. Run to create the csv files and the COLMAP folder
 
 ```bash
-python gps_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>
+python gps_sync.py --main-folder <path_to_main_folder> --csv-folder <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>
 ```
 
 ## Help:
