@@ -2,6 +2,10 @@
 
 ## Prerequisites:
 
+#### FFmpeg: https://ffmpeg.org/download.html
+
+#### Colmap: https://colmap.github.io/
+
 ## Run:
 
 1. Run to preprocess the images
@@ -12,15 +16,15 @@
    
 `python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_camera_folder> --total-frames <number_of_frames> --threshold-min <minimum_threshold> --threshold-max <maximum_threshold> --colmap-path <path_to_colmap_output_file>`
 
-### crop_rename
-* source-folder: Path to the source folder containing images
-* target-folder: Path to the target folder to save cropped images
-* crop-left: Left coordinate of the crop box
-* crop-upper: Upper coordinate of the crop box
-* crop-right: Right coordinate of the crop box
-* crop-lower: Lower coordinate of the crop box
+## Help:
+#### preprocess
+* main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
+* output-folder: Path to the outputput folder to save the processed images
+* input-type: 1)video: Extract frames from the Ficosa's video, 2)images: Assume that images are extracted and properly named
+* input-folder: If input-type==images it is the folder that contains them
 
-### GPS_sync
+
+#### GPS_sync
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
 * folder-cam: Path to the folder containing camera CSV files
 * total-frames: Number of frames to extract
