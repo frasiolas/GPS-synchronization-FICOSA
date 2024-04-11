@@ -1,6 +1,6 @@
 # GPS Synchronization Tool (CERTH)
 
-This tool extracts the frames from Ficosa's video (optional), preprocesses them so they can be utilized by COLMAP and synchronizes the frames with the provided GPS coordinates 
+This tool extracts the frames from Ficosa's video, preprocesses them so they can be utilized by COLMAP and synchronizes the frames with the provided GPS coordinates 
 ## Prerequisites:
 
 #### FFmpeg: https://ffmpeg.org/download.html
