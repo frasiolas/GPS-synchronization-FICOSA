@@ -29,7 +29,7 @@
 * input-type: {images, video}
    * video: Extract frames from the Ficosa's video
    * images: Assume that images are extracted and properly named
-* input-folder: If input-type==images it is the folder that contains them
+* input-folder: Folder that contains the input images (requires: input-type = images) 
 
 
 #### GPS_sync
