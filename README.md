@@ -10,7 +10,7 @@
 * Pillow
 * Pandas
 * Numpy
-* scipy
+* Scipy
 
 ## Run:
 
