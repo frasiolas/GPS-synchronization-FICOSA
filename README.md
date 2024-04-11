@@ -37,7 +37,7 @@ python GPS_sync.py --main-folder <path_to_main_folder> --folder-cam <path_to_cam
 * input-folder: Folder that contains the input images (requires: input-type = images) 
 
 
-#### GPS_sync
+#### gps_sync
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
 * folder-cam: Path to the folder containing camera CSV files
 * total-frames: Number of frames to extract
