@@ -26,7 +26,9 @@
 #### preprocess
 * main-folder: Path to the main folder ---> example: \FICOSA\VideoServer_DYMOS_VX\RealWorld\20240307_085658 
 * output-folder: Path to the outputput folder to save the processed images
-* input-type: 1)video: Extract frames from the Ficosa's video, 2)images: Assume that images are extracted and properly named
+* input-type: {images, video}
+   ** video: Extract frames from the Ficosa's video
+   ** images: Assume that images are extracted and properly named
 * input-folder: If input-type==images it is the folder that contains them
 
 
